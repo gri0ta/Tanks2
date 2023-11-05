@@ -9,6 +9,9 @@ public class Tank : MonoBehaviour
     public string horizontalAxis;
     public KeyCode shootKey;
 
+    public GameObject bullet;
+    public Transform shootPoint;
+
     void Update()
     {
         var ver = Input.GetAxis(verticalAxis);
@@ -19,7 +22,7 @@ public class Tank : MonoBehaviour
 
         if (Input.GetKeyDown(shootKey))
         {
-            print("Shoot !!!");
+            Instantiate(bullet,shootPoint.position,shootPoint.rotation);
         }
     }
 }
