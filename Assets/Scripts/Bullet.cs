@@ -5,6 +5,7 @@ public class Bullet : MonoBehaviour
     public float speed = 20;
     public GameObject particle;
     public float particleCount;
+    public GameObject scorchMark;
 
     void Start()
     {
@@ -21,11 +22,14 @@ public class Bullet : MonoBehaviour
         if (collision.gameObject.tag == "Boom")
         {
             Destroy(collision.gameObject);
-
+            //scorchMark.SetActive(true);
+            
             for (int i = 0; i < particleCount; i++)
             {
+                
                 var offset = Random.insideUnitSphere;
                 Instantiate(particle, transform.position + offset, transform.rotation);
+                Instantiate(scorchMark, transform.position, Quaternion.identity);
             }
             
         }

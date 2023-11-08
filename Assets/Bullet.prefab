@@ -122,6 +122,7 @@ MonoBehaviour:
   speed: 20
   particle: {fileID: 7554163720838261106, guid: 1c3dcbbd35c2b6844a3254274ef6cc65, type: 3}
   particleCount: 13
+  scorchMark: {fileID: 6604974786406356256, guid: b70ea316a7224d2408588c5e61ed8ba6, type: 3}
 --- !u!54 &618055365135267714
 Rigidbody:
   m_ObjectHideFlags: 0
