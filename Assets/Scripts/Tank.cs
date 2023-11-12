@@ -12,6 +12,9 @@ public class Tank : MonoBehaviour
     public GameObject bullet;
     public Transform shootPoint;
 
+    //public AudioSource source;
+    public AudioClip ShootingSound;
+
     void Update()
     {
         var ver = Input.GetAxis(verticalAxis);
@@ -24,6 +27,9 @@ public class Tank : MonoBehaviour
         if (Input.GetKeyDown(shootKey))
         {
             Instantiate(bullet,shootPoint.position,shootPoint.rotation);
+            var source = GetComponent<AudioSource>();
+            source.clip = ShootingSound;
+            source.Play();
         }
     }
 }

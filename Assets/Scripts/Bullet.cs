@@ -21,7 +21,7 @@ public class Bullet : MonoBehaviour
     {
         if (collision.gameObject.tag == "Boom")
         {
-            Destroy(collision.gameObject);
+            //Destroy(collision.gameObject);
             //scorchMark.SetActive(true);
             
             for (int i = 0; i < particleCount; i++)
@@ -29,9 +29,10 @@ public class Bullet : MonoBehaviour
                 
                 var offset = Random.insideUnitSphere;
                 Instantiate(particle, transform.position + offset, transform.rotation);
-                Instantiate(scorchMark, transform.position, Quaternion.identity);
+                //Instantiate(scorchMark, transform.position, Quaternion.identity);
             }
-            
+
+            collision.gameObject.GetComponent<Health>().Damage();
         }
 
         Destroy(gameObject);

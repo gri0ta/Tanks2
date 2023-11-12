@@ -63,6 +63,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 582a5d5fd0c414cc8937c29677dc5752, type: 3}
       insertIndex: -1
       addedObject: {fileID: 2507150368162025599}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 582a5d5fd0c414cc8937c29677dc5752, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: -8782876420005301088}
   m_SourcePrefab: {fileID: 100100000, guid: 582a5d5fd0c414cc8937c29677dc5752, type: 3}
 --- !u!1 &1845435295620054352 stripped
 GameObject:
@@ -88,7 +91,23 @@ CapsuleCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.34189463
+  m_Radius: 0.56
   m_Height: 6.2466993
   m_Direction: 1
   m_Center: {x: -0.0035505295, y: 3.1233497, z: -0.009875059}
+--- !u!114 &-8782876420005301088
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1845435295620054352}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 729976ff20a187e43a9d76d1dc759683, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hp: 5
+  particleCount: 5
+  particle: {fileID: 0}
+  autoDestroy: 0
